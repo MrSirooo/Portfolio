@@ -7,9 +7,7 @@
 
       <LayoutTabs class="absolute left-1/2 -translate-x-1/2" />
 
-      <button class="bg-primary text-black px-4 py-2 rounded font-bold cursor-pointer">
-        <NuxtLink :to="'/contact'" class="w-full h-full">Hire Me</NuxtLink>
-      </button>
+      <AppButton variant="primary" to="/contact" size="sm">Hire Me</AppButton>
     </div>
   </header>
 </template>
