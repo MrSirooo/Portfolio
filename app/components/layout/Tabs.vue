@@ -9,12 +9,8 @@
       href: '/projects',
     },
     {
-      label: 'Unity Works',
-      href: '/unityWorks',
-    },
-    {
-      label: 'Skills',
-      href: '/skills',
+      label: 'Technical Arsenal',
+      href: '/technicalArsenal',
     },
     {
       label: 'Contact',

@@ -5,7 +5,9 @@
         <NuxtLink :to="'/'" class="w-full h-full">[DEV_PORTFOLIO]</NuxtLink>
       </button>
 
-      <h2 class="text-[var(--color-text-muted)]">@ 2026 DEV_PORTFOLIO // ALL RIGHTS RESERVED</h2>
+      <h2 class="text-[var(--color-text-muted)] absolute left-1/2 -translate-x-1/2">
+        @ 2026 DEV_PORTFOLIO // ALL RIGHTS RESERVED
+      </h2>
 
       <LayoutRRSS />
     </div>

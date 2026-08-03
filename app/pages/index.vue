@@ -23,7 +23,7 @@
 
     <div class="flex items-center gap-10">
       <AppButton variant="primary" to="/projects" size="lg">VER PROYECTOS</AppButton>
-      <AppButton variant="secondary" to="/skills" size="lg">[Ver Arsenal]</AppButton>
+      <AppButton variant="secondary" to="/technicalArsenal" size="lg">[Ver Arsenal]</AppButton>
     </div>
   </section>
 </template>
