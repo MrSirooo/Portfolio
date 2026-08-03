@@ -10,4 +10,12 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
   },
+
+  ssr: false,
+
+  routeRules: {
+    '/home': {
+      prerender: true,
+    },
+  },
 })
