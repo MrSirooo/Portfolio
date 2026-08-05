@@ -20,7 +20,7 @@
         return 'bg-primary text-black rounded font-bold cursor-pointer'
 
       case 'secondary':
-        return 'border border-primary text-primary hover:bg-primary hover:text-background'
+        return 'border border-primary text-primary hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-background)]'
 
       case 'link':
         return 'relative pb-2 transition-colors hover:text-[var(--color-text-muted)] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[var(--color-text-muted)] after:transition-all after:duration-300 hover:after:w-full'
@@ -51,12 +51,14 @@
     ></NuxtLink>
 
     <a
-      v-if="props.href"
+      v-else-if="props.href"
       :href="props.href"
       target="_blank"
       rel="noopener noreferrer"
       :class="[baseClass, variantsClass, sizeClass]"
       ><slot></slot
     ></a>
+
+    <h2 v-else :class="[baseClass, variantsClass, sizeClass]"><slot></slot></h2>
   </button>
 </template>
