@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import type { Skill } from '~/types/Skill'
-  import SkillLevel from './SkillLevel.vue'
 
   defineProps<{
     skill: Skill
@@ -17,7 +16,7 @@
       <Icon :name="skill.icon" size="28" />
     </header>
 
-    <SkillLevel :level="skill.level" />
+    <TechnicalArsenalSkillLevel :level="skill.level" />
 
     <p>{{ skill.description }}</p>
   </article>

@@ -32,6 +32,10 @@ body {
     color: var(--color-primary);
   }
 
+  .text-muted {
+    color: var(--color-text-muted);
+  }
+
   .bg-black {
     background-color: var(--color-background);
   }
