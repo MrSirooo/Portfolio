@@ -18,7 +18,7 @@
 </script>
 
 <template>
-  <section aria-label="proyects" class="flex flex-col m-10 gap-16">
+  <section aria-label="proyects" class="flex flex-1 flex-col m-10 gap-16">
     <header class="flex items-center justify-between">
       <div class="flex flex-col gap-6">
         <h1 class="text-3xl">Proyectos destacados</h1>

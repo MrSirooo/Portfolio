@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section aria-label="technical-arsenal" class="flex flex-col m-16">
+  <section aria-label="technical-arsenal" class="flex flex-1 flex-col m-16">
     <div class="flex items-center w-full justify-between">
       <h1
         class="text-3xl relative after:absolute after:bg-[var(--color-primary)] after:w-1/2 after:-bottom-1 after:h-0.5 after:left-1"
