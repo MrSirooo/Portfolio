@@ -1,11 +1,15 @@
 <template>
-  <footer class="h-16 flex items-center" style="background-color: var(--color-border)">
-    <div class="mx-auto w-full px-6 lg:px-8 relative flex h-full items-center justify-between">
-      <button class="text-[var(--color-text)] text-2xl">
-        <NuxtLink :to="'/'" class="w-full h-full">[DEV_PORTFOLIO]</NuxtLink>
-      </button>
+  <footer
+    class="min-h-16 py-4 flex items-center bg-[var(--color-border)] border-t border-[var(--color-border)]"
+  >
+    <div
+      class="mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"
+    >
+      <NuxtLink to="/" class="text-[var(--color-text)] text-lg sm:text-xl font-bold">
+        [DEV_PORTFOLIO]
+      </NuxtLink>
 
-      <h2 class="text-[var(--color-text-muted)] absolute left-1/2 -translate-x-1/2">
+      <h2 class="text-[var(--color-text-muted)] text-xs sm:text-sm">
         @ 2026 DEV_PORTFOLIO // ALL RIGHTS RESERVED
       </h2>
 

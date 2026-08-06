@@ -18,11 +18,18 @@
 </script>
 
 <template>
-  <section aria-label="proyects" class="flex flex-1 flex-col m-10 gap-16">
-    <header class="flex items-center justify-between">
-      <div class="flex flex-col gap-6">
-        <h1 class="text-3xl">Proyectos destacados</h1>
-        <h3 class="text-muted">Una selección de mis mejores implementaciones y diseños</h3>
+  <section
+    aria-label="proyects"
+    class="flex flex-1 flex-col w-full px-6 lg:px-16 py-8 gap-8 md:gap-12"
+  >
+    <header
+      class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 w-full"
+    >
+      <div class="flex flex-col gap-2">
+        <h1 class="text-2xl sm:text-4xl font-bold">Proyectos destacados</h1>
+        <h3 class="text-muted text-sm sm:text-base">
+          Una selección de mis mejores implementaciones y diseños
+        </h3>
       </div>
 
       <FilterButtons
@@ -32,7 +39,8 @@
       />
     </header>
 
-    <div class="grid gap-10 place-items-center md:grid-cols-1 xl:grid-cols-2">
+    <!-- Grid de tarjetas -->
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 items-stretch w-full">
       <ProyectCard v-for="project in filteredProjects" :key="project.name" :project="project" />
     </div>
   </section>
