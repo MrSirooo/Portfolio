@@ -14,8 +14,12 @@ export default defineNuxtConfig({
   ssr: false,
 
   routeRules: {
-    '/home': {
+    '/': {
       prerender: true,
     },
+  },
+
+  app: {
+    baseURL: '/Portfolio/',
   },
 })
