@@ -12,11 +12,9 @@
 
 ## 🔗 Enlaces del Proyecto
 
-<!-- CAMBIAR ENLACES -->
-
-- **🌐 Aplicación Desplegada (Live Demo):** [https://tu-portfolio.netlify.app](https://tu-portfolio.netlify.app)
-- **🎨 Mockup de Diseño (Figma):** [Ver Mockup en Figma](https://stitch.withgoogle.com/projects/9481810552630355918?pli=1)
-- **📌 Issue Principal (Epic Tracker):** [Issue #1 - [EPIC] Desarrollo de Portfolio](https://github.com/tu-usuario/tu-repo/issues/1)
+- **🌐 Aplicación Desplegada (Live Demo):** [https://mrsirooo.github.io/Portfolio/](https://mrsirooo.github.io/Portfolio/)
+- **🎨 Mockup de Diseño (Figma):** [Ver Mockup en Figma](https://stitch.withgoogle.com/projects/9481810552630355918)
+- **📌 Issue Principal (Epic Tracker):** [Issue #1 - [EPIC] Desarrollo de Portfolio](https://github.com/MrSirooo/Portfolio/issues/2#issue-5018796980)
 
 ---
 
@@ -29,45 +27,6 @@
 - **Gestión de Datos:** Archivos `JSON` locales para desacoplar el contenido de la interfaz
 - **Componentes:** Single File Components (`.vue` SFCs)
 - **Calidad de Código & Git Hooks:**
-
-<!-- REVISAR -->
-
-- **ESLint** & **Prettier** (Linter con flat config y formateador de código)
-- **Husky** + **Commitlint** (Validación automatizada de _Conventional Commits_)
-- **lint-staged** (Comprobación y formateo previo a cada commit)
-
----
-
-## 📐 Arquitectura y Buenas Prácticas
-
-### 1. Principios de Código y Arquitectura
-
-- **SOLID / Single Responsibility:** Separación limpia de responsabilidades. Los componentes SFC se enfocan únicamente en la vista/UI, mientras que los datos y lógica reactiva se gestionan en _composables_ dedicados (`usePortfolioData.ts`, etc.).
-- **DRY (Don't Repeat Yourself):** Reutilización de componentes SFC de UI (Botones, Tarjetas, Modales) y extracción de clases de utilidad recurrentes o tokens de Tailwind en la configuración global.
-- **Early Return Pattern:** Simplificación de la lógica condicional en funciones y composables para evitar anidamientos innecesarios y mejorar la legibilidad.
-- **Manejo de Errores:** Bloques `try/catch` en la carga de datos JSON, estados reactivos de error/cargando (`pending`, `error`) y página de error personalizada (`app/error.vue`).
-
-### 2. Estilos con Tailwind CSS
-
-- **Design System / Tokens:** Extensión de la configuración de Tailwind (`tailwind.config.ts`) para definir la paleta de colores del portafolio, fuentes tipográficas y breakpoints personalizados.
-- **Responsive Design:** Maquetación _Mobile-First_ utilizando prefijos nativos de Tailwind (`sm:`, `md:`, `lg:`, `xl:`).
-- **Custom Utility / Reusabilidad:** Uso de `@apply` moderado o composición de clases mediante utilidades para evitar duplicación.
-
-### 3. UX, Accesibilidad (a11y) y SEO
-
-- **HTML Semántico:** Uso estricto de etiquetas de maquetación (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`).
-- **Accesibilidad:** Atributos ARIA (`aria-label`, `aria-expanded`), navegación fluida por teclado, soporte de contraste adecuado y estados `:focus-visible` visibles.
-- **SEO & Performance:** Meta etiquetas dinámicas con `useSeoMeta()` / `useHead()`, etiquetas Open Graph (OG), favicon y optimización de assets.
-
----
-
-## 📋 Gestión del Proyecto y Flujo de Git
-
-El proyecto sigue la metodología de desarrollo de un equipo de producción real:
-
-1. **Gestión por Issues:** Planificación articulada en un **Issue Epic** general ([#1]) desglosado en Sub-Issues independientes para cada característica/componente.
-2. **Estrategia de Ramas:** Desarrollo aislado por característica (`feature/issue-X-*`, `fix/issue-X-*`) e integración hacia `main` mediante **Pull Requests**.
-3. **Conventional Commits:** Formato obligatorio de mensajes de commit (`feat:`, `fix:`, `style:`, `refactor:`, `docs:`, `ci:`), auditado por **Commitlint** mediante hooks de **Husky**.
 
 ---
 
