@@ -1,5 +1,7 @@
 <script setup lang="ts">
+  import { useRuntimeConfig } from '#app'
   import AppButton from '../AppButton.vue'
+  const config = useRuntimeConfig()
 
   defineProps<{
     project: {
@@ -20,7 +22,7 @@
       {{ project.engine }}
     </h3>
 
-    <img :src="project.image" :alt="project.name" class="self-center" />
+    <img :src="`${config.app.baseURL}${project.image}`" :alt="project.name" class="self-center" />
 
     <h1 class="text-3xl">{{ project.name }}</h1>
 
