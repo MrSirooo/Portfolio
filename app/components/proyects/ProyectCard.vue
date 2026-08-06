@@ -16,20 +16,34 @@
 
 <template>
   <article
-    class="flex flex-col justify-center gap-6 bg-secundary p-6 border-primary hover:border max-w-2xl relative"
+    class="flex flex-col gap-4 sm:gap-6 bg-secundary p-4 sm:p-6 border-primary hover:border w-full h-full relative rounded-lg overflow-hidden"
   >
-    <h3 class="absolute top-0 left-0 text-2xl p-1 m-4 bg-primary text-black font-bold">
+    <h3
+      class="absolute top-2 left-2 sm:top-4 sm:left-4 text-xs sm:text-sm p-1.5 bg-primary text-black font-bold uppercase tracking-wider z-10"
+    >
       {{ project.engine }}
     </h3>
 
-    <img :src="`${config.app.baseURL}${project.image}`" :alt="project.name" class="self-center" />
+    <img
+      :src="`${config.app.baseURL}${project.image}`"
+      :alt="project.name"
+      class="w-full aspect-video object-cover rounded"
+    />
 
-    <h1 class="text-3xl">{{ project.name }}</h1>
+    <h1 class="text-xl sm:text-3xl font-bold">{{ project.name }}</h1>
 
-    <p>{{ project.description }}</p>
+    <p class="text-sm sm:text-base text-[var(--color-text-muted)]">{{ project.description }}</p>
 
-    <AppButton v-if="project.github" variant="link" size="lg" :href="project.github"
-      >Github</AppButton
-    >
+    <div class="mt-auto pt-2">
+      <AppButton
+        v-if="project.github"
+        variant="link"
+        size="md"
+        :href="project.github"
+        class="self-start"
+      >
+        Github
+      </AppButton>
+    </div>
   </article>
 </template>

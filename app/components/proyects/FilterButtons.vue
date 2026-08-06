@@ -12,11 +12,11 @@
 </script>
 
 <template>
-  <ul class="flex items-center justify-center gap-10">
+  <ul class="flex flex-wrap items-center gap-2 sm:gap-3">
     <li v-for="filter in filters" :key="filter">
       <AppButton
         :variant="currentFilter === filter ? 'primary' : 'secondary'"
-        size="lg"
+        size="sm"
         @click="emit('change', filter)"
       >
         {{ filter }}

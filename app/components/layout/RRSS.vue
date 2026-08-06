@@ -12,10 +12,12 @@
 </script>
 
 <template>
-  <nav aria-label="Main navigation" class="w-fit">
-    <ul class="flex items-center justify-center gap-10">
+  <nav aria-label="Social navigation" class="w-fit">
+    <ul class="flex items-center justify-center gap-4 sm:gap-6">
       <li v-for="rs in rrss" :key="rs.label">
-        <AppButton variant="link" :href="rs.href" size="lg">{{ rs.label }}</AppButton>
+        <AppButton variant="link" :href="rs.href" size="sm">
+          {{ rs.label }}
+        </AppButton>
       </li>
     </ul>
   </nav>
