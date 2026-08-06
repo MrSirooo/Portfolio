@@ -3,9 +3,11 @@
     aria-label="Home"
     class="flex flex-1 flex-col items-center justify-center min-h-[calc(100vh-16rem)] gap-6"
   >
-    <span class="text-primary">VERSION 2.05 // MOTOR_LISTO</span>
+    <span class="text-primary border border-primary p-2 bg-[var(--color-blue-bg)]"
+      >VERSION 2.05 // MOTOR_LISTO</span
+    >
 
-    <span class="text-[var(--color-text-muted)]">DEVELOPER // IAGO OTERO</span>
+    <span class="text-[var(--color-text-grey)]">DEVELOPER // IAGO OTERO</span>
 
     <h1 class="flex flex-col items-center w-full text-8xl text-center">
       <span class="text-[var(--color-text)]">Construyendo Mundos,</span>

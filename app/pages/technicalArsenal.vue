@@ -10,7 +10,7 @@
       >
         Arsenal Técnico
       </h1>
-      <h2 class="text-[var(--color-text-muted)]">//MATRIZ DE HABILIDADES</h2>
+      <h2 class="text-[var(--color-text-grey)]">//MATRIZ DE HABILIDADES</h2>
     </div>
 
     <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">

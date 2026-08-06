@@ -77,7 +77,7 @@
         id="name"
         v-model="form.name"
         type="text"
-        class="bg-input w-full rounded-md border px-4 py-3"
+        class="bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3"
         placeholder="Nombre Apellido"
       />
     </div>
@@ -89,7 +89,7 @@
         id="email"
         v-model="form.email"
         type="text"
-        class="bg-input w-full rounded-md border px-4 py-3"
+        class="bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3"
         placeholder="correo@dominio.com"
       />
     </div>
@@ -101,7 +101,7 @@
         id="message"
         v-model="form.message"
         rows="8"
-        class="bg-input w-full rounded-md border px-4 py-3"
+        class="bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3"
         placeholder="Tengo un proyecto que cambiará el mundo..."
       />
     </div>

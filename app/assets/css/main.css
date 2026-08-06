@@ -8,10 +8,12 @@
 
   --color-background: #111111;
   --color-secundary-bg: #1c1b1d;
+  --color-blue-bg: #00dae91e;
   --color-input-bg: #2d2b2e;
 
   --color-text: #f4f4f5;
   --color-text-muted: #a1a1aa;
+  --color-text-grey: #55555a;
 
   --color-border: #27272a;
 }
