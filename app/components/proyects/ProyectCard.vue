@@ -16,7 +16,7 @@
 
 <template>
   <article
-    class="flex flex-col gap-4 sm:gap-6 bg-secundary p-4 sm:p-6 border-primary hover:border w-full h-full relative rounded-lg overflow-hidden"
+    class="flex flex-col gap-4 sm:gap-6 bg-secundary p-4 sm:p-6 border-primary hover:border w-full h-full max-w-2xl relative rounded-lg overflow-hidden"
   >
     <h3
       class="absolute top-2 left-2 sm:top-4 sm:left-4 text-xs sm:text-sm p-1.5 bg-primary text-black font-bold uppercase tracking-wider z-10"
@@ -30,7 +30,7 @@
       class="w-full aspect-video object-cover rounded"
     />
 
-    <h1 class="text-xl sm:text-3xl font-bold">{{ project.name }}</h1>
+    <h2 class="text-xl sm:text-3xl font-bold">{{ project.name }}</h2>
 
     <p class="text-sm sm:text-base text-[var(--color-text-muted)]">{{ project.description }}</p>
 

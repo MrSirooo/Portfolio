@@ -12,9 +12,9 @@
   >
     <div class="flex flex-col gap-6">
       <header class="flex items-center justify-between gap-2">
-        <h3 class="text-xl sm:text-2xl font-bold text-primary break-words">
+        <h2 class="text-xl sm:text-2xl font-bold text-primary break-words">
           {{ skill.name }}
-        </h3>
+        </h2>
 
         <Icon :name="skill.icon" size="28" class="shrink-0" />
       </header>

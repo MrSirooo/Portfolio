@@ -29,12 +29,12 @@
         <Icon :name="contactInfo.emailIcon" size="40" class="shrink-0" />
         <div class="flex flex-col min-w-0">
           <h4 class="text-xs sm:text-sm text-muted">PROTOCOLO_EMAIL</h4>
-          <h3
-            class="text-sm sm:text-base break-all cursor-pointer transition-colors hover:text-primary"
+          <button
+            class="text-left text-sm sm:text-base break-all cursor-pointer transition-colors hover:text-primary"
             @click="copyToClipboard(contactInfo.email)"
           >
             {{ contactInfo.email }}
-          </h3>
+          </button>
         </div>
       </div>
 
@@ -42,12 +42,12 @@
         <Icon :name="contactInfo.phoneIcon" size="40" class="shrink-0" />
         <div class="flex flex-col min-w-0">
           <h4 class="text-xs sm:text-sm text-muted">PROTOCOLO_PHONE</h4>
-          <h3
-            class="text-sm sm:text-base cursor-pointer transition-colors hover:text-primary"
+          <button
+            class="text-left text-sm sm:text-base cursor-pointer transition-colors hover:text-primary"
             @click="copyToClipboard(contactInfo.phone)"
           >
             {{ contactInfo.phone }}
-          </h3>
+          </button>
         </div>
       </div>
     </div>

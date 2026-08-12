@@ -5,7 +5,7 @@
   >
     <layoutHeader />
 
-    <main class="flex flex-1 flex-col w-full">
+    <main class="flex flex-1 flex-col w-full pt-16">
       <slot />
     </main>
 

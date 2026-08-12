@@ -1,5 +1,6 @@
 <script setup lang="ts">
-  import { reactive } from 'vue'
+  import { ref } from 'vue'
+  const { showNotification } = useNotification()
 
   interface ContactForm {
     name: string
@@ -7,15 +8,27 @@
     message: string
   }
 
-  const form = reactive<ContactForm>({
+  interface errorForm {
+    nameError: string
+    emailError: string
+    messageError: string
+  }
+
+  const form = ref<ContactForm>({
     name: '',
     email: '',
     message: '',
   })
 
+  const errors = ref<errorForm>({
+    nameError: '',
+    emailError: '',
+    messageError: '',
+  })
+
   const validateName = (): boolean => {
-    if (!form.name.trim()) {
-      console.log('Name is required')
+    if (!form.value.name.trim()) {
+      errors.value.nameError = 'Name is required'
       return false
     }
 
@@ -23,19 +36,19 @@
   }
 
   const isValidEmail = (email: string): boolean => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
     return emailRegex.test(email)
   }
 
   const validateEmail = (): boolean => {
-    if (!form.email.trim()) {
-      console.log('Email is required')
+    if (!form.value.email.trim()) {
+      errors.value.emailError = 'Email is required'
       return false
     }
 
-    if (!isValidEmail(form.email)) {
-      console.log('Please enter a valid email address')
+    if (!isValidEmail(form.value.email)) {
+      errors.value.emailError = 'Please enter a valid email address'
       return false
     }
 
@@ -43,8 +56,8 @@
   }
 
   const validateMessage = (): boolean => {
-    if (!form.message.trim()) {
-      console.log('Message is required')
+    if (!form.value.message.trim()) {
+      errors.value.messageError = 'Message is required'
       return false
     }
 
@@ -52,16 +65,24 @@
   }
 
   const validateForm = (): boolean => {
-    return [validateName(), validateEmail(), validateMessage()].every(Boolean)
+    errors.value.nameError = ''
+    errors.value.emailError = ''
+    errors.value.messageError = ''
+
+    const isNameValid = validateName()
+    const isEmailValid = validateEmail()
+    const isMessageValid = validateMessage()
+
+    return isNameValid && isEmailValid && isMessageValid
   }
 
   const handleSubmit = (): void => {
     if (!validateForm()) {
-      console.log('Invalid Form')
+      showNotification('Transmisión fallida. Revisa los datos marcados.', 'error')
       return
     }
 
-    console.log('Form is valid')
+    showNotification('Conexión establecida. Mensaje enviado con éxito.', 'success')
   }
 </script>
 
@@ -79,9 +100,15 @@
         id="name"
         v-model="form.name"
         type="text"
-        class="bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3 text-sm sm:text-base"
+        :class="[
+          'bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3 text-sm sm:text-base',
+          errors.nameError ? 'border-red-500' : 'border-[var(--color-text-grey)]'
+        ]"
         placeholder="Nombre Apellido"
       />
+      <span v-if="errors.nameError" class="text-xs text-red-500 font-medium">
+        {{ errors.nameError }}
+      </span>
     </div>
 
     <div>
@@ -91,9 +118,15 @@
         id="email"
         v-model="form.email"
         type="text"
-        class="bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3 text-sm sm:text-base"
+        :class="[
+          'bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3 text-sm sm:text-base',
+          errors.emailError ? 'border-red-500' : 'border-[var(--color-text-grey)]'
+        ]"
         placeholder="correo@dominio.com"
       />
+      <span v-if="errors.emailError" class="text-xs text-red-500 font-medium">
+        {{ errors.emailError }}
+      </span>
     </div>
 
     <div>
@@ -105,11 +138,19 @@
         id="message"
         v-model="form.message"
         rows="6"
-        class="bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3 text-sm sm:text-base"
+        :class="[
+          'bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3 text-sm sm:text-base',
+          errors.messageError ? 'border-red-500' : 'border-[var(--color-text-grey)]'
+        ]"
         placeholder="Tengo un proyecto que cambiará el mundo..."
       />
+      <span v-if="errors.messageError" class="text-xs text-red-500 font-medium">
+        {{ errors.messageError }}
+      </span>
     </div>
 
     <AppButton variant="primary" size="lg">ESTABLECER CONEXIÓN</AppButton>
   </form>
+
+  <AppNotification />
 </template>

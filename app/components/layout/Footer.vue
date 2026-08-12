@@ -5,7 +5,7 @@
     <div
       class="mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"
     >
-      <NuxtLink to="/" class="text-[var(--color-text)] text-lg sm:text-xl font-bold">
+      <NuxtLink to="/" class="text-[var(--color-text)] text-lg sm:text-xl font-bold hover:text-[var(--color-primary-hover)] transition-colors duration-300">
         [DEV_PORTFOLIO]
       </NuxtLink>
 

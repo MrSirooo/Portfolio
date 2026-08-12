@@ -39,8 +39,7 @@
       />
     </header>
 
-    <!-- Grid de tarjetas -->
-    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 items-stretch w-full">
+    <div class="grid grid-cols-1 justify-items-center xl:grid-cols-2 gap-8 items-stretch w-full">
       <ProyectCard v-for="project in filteredProjects" :key="project.name" :project="project" />
     </div>
   </section>

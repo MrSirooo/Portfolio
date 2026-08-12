@@ -17,7 +17,7 @@
   const variantsClass = computed(() => {
     switch (props.variant) {
       case 'primary':
-        return 'bg-primary text-black rounded font-bold cursor-pointer'
+        return 'bg-primary text-black rounded font-bold cursor-pointer border border-primary hover:text-[var(--color-primary-hover)] hover:bg-[var(--color-background)] '
 
       case 'secondary':
         return 'border border-primary text-primary hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-background)]'
@@ -59,6 +59,6 @@
       ><slot></slot
     ></a>
 
-    <h2 v-else :class="[baseClass, variantsClass, sizeClass]"><slot></slot></h2>
+    <p v-else :class="[baseClass, variantsClass, sizeClass]"><slot></slot></p>
   </button>
 </template>
