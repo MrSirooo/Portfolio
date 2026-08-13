@@ -9,9 +9,6 @@
 
   const props = defineProps<Props>()
 
-  const baseClass =
-    'inline-flex items-center justify-center font-medium transition-colors duration-300'
-
   const variantsClass = computed(() => {
     switch (props.variant) {
       case 'primary':
@@ -44,7 +41,14 @@
 
 <template>
   <button>
-    <NuxtLink v-if="props.to" :to="props.to" :class="[baseClass, variantsClass, sizeClass]"
+    <NuxtLink
+      v-if="props.to"
+      :to="props.to"
+      :class="[
+        'inline-flex items-center justify-center font-medium transition-colors duration-300',
+        variantsClass,
+        sizeClass,
+      ]"
       ><slot
     /></NuxtLink>
 
@@ -53,10 +57,23 @@
       :href="props.href"
       target="_blank"
       rel="noopener noreferrer"
-      :class="[baseClass, variantsClass, sizeClass]"
+      :class="[
+        'inline-flex items-center justify-center font-medium transition-colors duration-300',
+        variantsClass,
+        sizeClass,
+      ]"
       ><slot
     /></a>
 
-    <p v-else :class="[baseClass, variantsClass, sizeClass]"><slot /></p>
+    <p
+      v-else
+      :class="[
+        'inline-flex items-center justify-center font-medium transition-colors duration-300',
+        variantsClass,
+        sizeClass,
+      ]"
+    >
+      <slot />
+    </p>
   </button>
 </template>
