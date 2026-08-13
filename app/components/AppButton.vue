@@ -12,7 +12,7 @@
   const variantsClass = computed(() => {
     switch (props.variant) {
       case 'primary':
-        return 'bg-primary text-black rounded font-bold cursor-pointer border border-primary hover:text-[var(--color-primary-hover)] hover:bg-[var(--color-background)] '
+        return 'bg-primary text-black rounded font-bold cursor-pointer border border-primary hover:text-[var(--color-primary-hover)] hover:bg-black '
 
       case 'secondary':
         return 'border border-primary text-primary hover:bg-[var(--color-primary-hover)] hover:text-[var(--color-background)]'

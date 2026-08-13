@@ -1,6 +1,4 @@
 <script setup lang="ts">
-  import { useRuntimeConfig } from '#app'
-  import AppButton from '../AppButton.vue'
   const config = useRuntimeConfig()
 
   defineProps<{
