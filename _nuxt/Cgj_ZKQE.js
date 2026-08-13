@@ -1,0 +1,1 @@
+import{pt as e}from"./2wzfB8Of.js";var t=e({show:!1,message:``,type:`success`,position:`bottom-right`}),n=null,r=()=>({notification:t,showNotification:(e,r,i=`bottom-right`)=>{t.value.message=e,t.value.type=r,t.value.show=!0,t.value.position=i,n&&clearTimeout(n),n=setTimeout(()=>{t.value.show=!1},2e3)}});export{r as t};
