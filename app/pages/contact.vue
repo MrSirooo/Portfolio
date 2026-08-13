@@ -1,11 +1,13 @@
 <script setup lang="ts">
   import contactInfo from '~/data/contactData.json'
+  const { showNotification } = useNotification()
 
-  const copyToClipboard = async (text: string): Promise<void> => {
+  const copyToClipboard = async (text: string, parameter: string): Promise<void> => {
     try {
       await navigator.clipboard.writeText(text)
+      showNotification(`${parameter} copiado correctamente.`, 'success', 'bottom-left')
     } catch (error) {
-      console.error('Could not copy text:', error)
+      showNotification(`Error: ${error}.`, 'error', 'bottom-left')
     }
   }
 </script>
@@ -31,7 +33,7 @@
           <h4 class="text-xs sm:text-sm text-muted">PROTOCOLO_EMAIL</h4>
           <button
             class="text-left text-sm sm:text-base break-all cursor-pointer transition-colors hover:text-primary"
-            @click="copyToClipboard(contactInfo.email)"
+            @click="copyToClipboard(contactInfo.email, 'Correo')"
           >
             {{ contactInfo.email }}
           </button>
@@ -44,7 +46,7 @@
           <h4 class="text-xs sm:text-sm text-muted">PROTOCOLO_PHONE</h4>
           <button
             class="text-left text-sm sm:text-base cursor-pointer transition-colors hover:text-primary"
-            @click="copyToClipboard(contactInfo.phone)"
+            @click="copyToClipboard(contactInfo.phone, 'Telefono')"
           >
             {{ contactInfo.phone }}
           </button>

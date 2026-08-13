@@ -1,6 +1,4 @@
 <script setup lang="ts">
-  import { computed } from 'vue'
-
   interface Props {
     variant?: 'primary' | 'secondary' | 'link'
     size?: 'sm' | 'md' | 'lg'
@@ -47,8 +45,8 @@
 <template>
   <button>
     <NuxtLink v-if="props.to" :to="props.to" :class="[baseClass, variantsClass, sizeClass]"
-      ><slot></slot
-    ></NuxtLink>
+      ><slot
+    /></NuxtLink>
 
     <a
       v-else-if="props.href"
@@ -56,9 +54,9 @@
       target="_blank"
       rel="noopener noreferrer"
       :class="[baseClass, variantsClass, sizeClass]"
-      ><slot></slot
-    ></a>
+      ><slot
+    /></a>
 
-    <p v-else :class="[baseClass, variantsClass, sizeClass]"><slot></slot></p>
+    <p v-else :class="[baseClass, variantsClass, sizeClass]"><slot /></p>
   </button>
 </template>

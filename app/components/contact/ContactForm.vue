@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
   const { showNotification } = useNotification()
 
   interface ContactForm {
@@ -36,7 +35,7 @@
   }
 
   const isValidEmail = (email: string): boolean => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
     return emailRegex.test(email)
   }
@@ -102,7 +101,7 @@
         type="text"
         :class="[
           'bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3 text-sm sm:text-base',
-          errors.nameError ? 'border-red-500' : 'border-[var(--color-text-grey)]'
+          errors.nameError ? 'border-red-500' : 'border-[var(--color-text-grey)]',
         ]"
         placeholder="Nombre Apellido"
       />
@@ -120,7 +119,7 @@
         type="text"
         :class="[
           'bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3 text-sm sm:text-base',
-          errors.emailError ? 'border-red-500' : 'border-[var(--color-text-grey)]'
+          errors.emailError ? 'border-red-500' : 'border-[var(--color-text-grey)]',
         ]"
         placeholder="correo@dominio.com"
       />
@@ -140,7 +139,7 @@
         rows="6"
         :class="[
           'bg-input w-full rounded-md border border-[var(--color-text-grey)] px-4 py-3 text-sm sm:text-base',
-          errors.messageError ? 'border-red-500' : 'border-[var(--color-text-grey)]'
+          errors.messageError ? 'border-red-500' : 'border-[var(--color-text-grey)]',
         ]"
         placeholder="Tengo un proyecto que cambiará el mundo..."
       />
@@ -151,6 +150,4 @@
 
     <AppButton variant="primary" size="lg">ESTABLECER CONEXIÓN</AppButton>
   </form>
-
-  <AppNotification />
 </template>

@@ -47,7 +47,5 @@
 ├── public/                 # Assets estáticos (Favicon, imágenes)
 ├── eslint.config.mjs       # Configuración de ESLint (Flat Config)
 ├── .prettierrc.json        # Reglas de formato de Prettier
-├── .commitlintrc.json      # Reglas de Conventional Commits
-├── nuxt.config.ts          # Configuración principal de Nuxt 4
-└── tailwind.config.ts      # Tokens y configuración de Tailwind CSS
+└── nuxt.config.ts          # Configuración principal de Nuxt 4
 ```

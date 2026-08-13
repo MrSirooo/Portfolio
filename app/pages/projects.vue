@@ -1,10 +1,7 @@
 <script setup lang="ts">
-  import { computed, ref } from 'vue'
-  import ProyectCard from '~/components/proyects/ProyectCard.vue'
-  import FilterButtons from '~/components/proyects/FilterButtons.vue'
   import projects from '~/data/proyectsData.json'
 
-  const filters = ['All', 'Unity', 'Unreal Engine'] as const
+  const filters = ['All', 'Unity', 'Unreal Engine']
 
   const currentFilter = ref<(typeof filters)[number]>('All')
 
@@ -15,6 +12,12 @@
 
     return projects.filter(project => project.engine === currentFilter.value)
   })
+
+  const changeCurrentFilter = (eventName: string) => {
+    if (!filters.includes(eventName)) return
+
+    currentFilter.value = eventName
+  }
 </script>
 
 <template>
@@ -32,15 +35,15 @@
         </h3>
       </div>
 
-      <FilterButtons
+      <ProyectsFilterButtons
         :filters="filters"
         :current-filter="currentFilter"
-        @change="currentFilter = $event as (typeof filters)[number]"
+        @change="changeCurrentFilter"
       />
     </header>
 
     <div class="grid grid-cols-1 justify-items-center xl:grid-cols-2 gap-8 items-stretch w-full">
-      <ProyectCard v-for="project in filteredProjects" :key="project.name" :project="project" />
+      <ProyectsCard v-for="project in filteredProjects" :key="project.name" :project="project" />
     </div>
   </section>
 </template>

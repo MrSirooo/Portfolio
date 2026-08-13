@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  modules: ['@nuxt/icon', '@nuxtjs/tailwindcss'],
+  modules: ['@nuxt/icon', '@nuxtjs/tailwindcss', '@nuxt/eslint'],
 
   css: ['~/assets/css/main.css'],
 
@@ -15,5 +15,8 @@ export default defineNuxtConfig({
 
   app: {
     baseURL: '/Portfolio/',
+    head: {
+      htmlAttrs: { lang: 'es' },
+    },
   },
 })
