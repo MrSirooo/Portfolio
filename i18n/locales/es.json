@@ -1,0 +1,39 @@
+{
+  "home": {
+    "statusBadge": "VERSION 2.05 // MOTOR_LISTO",
+    "developerLabel": "DESARROLLADOR // IAGO OTERO",
+    "title": {
+      "part1": "Construyendo Mundos,",
+      "part2": "Frame a Frame"
+    },
+    "description": "Diseñador y Programador de Videojuegos con experiencia desarrollando en Unity y UnrealEngine. A lo largo de mi trayectoria he colaborado en equipos multidisciplinares, trabajando estrechamente con profesionales de distintas áreas del desarrollo de videojuegos. Esta experiencia me ha permitido desarrollar una comunicación eficaz entre departamentos, facilitar la coordinación de equipos y contribuir de forma eficiente al desarrollo de proyectos.",
+    "buttons": {
+      "projects": "VER PROYECTOS",
+      "arsenal": "[Ver Arsenal]"
+    }
+  },
+
+  "projects": {
+    "title": "Proyectos destacados",
+    "description": "Una selección de mis mejores implementaciones y diseños",
+    "filters": {
+      "all": "Todos",
+      "unity": "Unity",
+      "unreal": "Unreal Engine"
+    },
+    "items": {
+      "catchTheFly": {
+        "name": "Catch The Fly",
+        "description": "Descripción de Catch The Fly"
+      },
+      "horrorPrototype": {
+        "name": "Horror Prototype",
+        "description": "Descripción de Horror Prototype"
+      },
+      "puzzleGame": {
+        "name": "Puzzle Game",
+        "description": "Descripción de Puzzle Game"
+      }
+    }
+  }
+}

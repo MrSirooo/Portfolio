@@ -1,20 +1,22 @@
 <script setup>
+  const localePath = useLocalePath()
+
   const tabs = [
     {
       label: 'Home',
-      href: '/',
+      path: '/',
     },
     {
       label: 'Projects',
-      href: '/projects',
+      path: '/projects',
     },
     {
       label: 'Technical Arsenal',
-      href: '/technicalArsenal',
+      path: '/technicalArsenal',
     },
     {
       label: 'Contact',
-      href: '/contact',
+      path: '/contact',
     },
   ]
 </script>
@@ -26,7 +28,7 @@
     >
       <li v-for="tab in tabs" :key="tab.label">
         <NuxtLink
-          :to="tab.href"
+          :to="localePath(tab.path)"
           active-class="text-primary after:w-full"
           class="relative pb-1 transition-colors hover:text-primary after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[var(--color-primary)] after:transition-all after:duration-300 hover:after:w-full"
         >

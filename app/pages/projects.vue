@@ -1,22 +1,42 @@
 <script setup lang="ts">
   import projects from '~/data/proyectsData.json'
 
-  const FILTERS = ['All', 'Unity', 'Unreal Engine']
+  const FILTERS = [
+    {
+      value: 'All',
+      label: 'projects.filters.all',
+    },
+    {
+      value: 'Unity',
+      label: 'projects.filters.unity',
+    },
+    {
+      value: 'Unreal Engine',
+      label: 'projects.filters.unreal',
+    },
+  ] as const
 
-  const currentFilter = ref<(typeof FILTERS)[number]>('All')
+  const currentFilter = ref<(typeof FILTERS)[number]['value']>('All')
 
   const filteredProjects = computed(() => {
-    if (currentFilter.value === 'All') {
-      return projects
-    }
+    const filtered =
+      currentFilter.value === 'All'
+        ? projects
+        : projects.filter(project => project.engine === currentFilter.value)
 
-    return projects.filter(project => project.engine === currentFilter.value)
+    return filtered.map(project => ({
+      ...project,
+      name: $t(`projects.items.${project.id}.name`),
+      description: $t(`projects.items.${project.id}.description`),
+    }))
   })
 
-  const changeCurrentFilter = (eventName: string) => {
-    if (!FILTERS.includes(eventName)) return
+  const changeCurrentFilter = (filter: string): void => {
+    if (!FILTERS.some(item => item.value === filter)) {
+      return
+    }
 
-    currentFilter.value = eventName
+    currentFilter.value = filter as typeof currentFilter.value
   }
 </script>
 
@@ -29,9 +49,9 @@
       class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 w-full"
     >
       <div class="flex flex-col gap-2">
-        <h1 class="text-2xl sm:text-4xl font-bold">Proyectos destacados</h1>
+        <h1 class="text-2xl sm:text-4xl font-bold">{{ $t('projects.title') }}</h1>
         <h3 class="text-muted text-sm sm:text-base">
-          Una selección de mis mejores implementaciones y diseños
+          {{ $t('projects.description') }}
         </h3>
       </div>
 

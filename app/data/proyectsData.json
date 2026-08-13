@@ -1,21 +1,18 @@
 [
   {
-    "name": "Catch The Fly",
+    "id": "catchTheFly",
     "engine": "Unity",
-    "description": "dnsaj  dsa dsa sda dsjabdsa dsad sadk wadscusb adbsua hdoif ba fboa",
     "image": "images/projects/catchTheFly.png",
     "github": "dsadsa"
   },
   {
-    "name": "Horror Prototype",
+    "id": "horrorPrototype",
     "engine": "Unreal Engine",
-    "description": "dnsaj  dsa dsa sda dsjabdsa dsad sadk wadscusb adbsua hdoif ba fboa",
     "image": "images/projects/alienIsolation.png"
   },
   {
-    "name": "Puzzle Game",
+    "id": "puzzleGame",
     "engine": "Unity",
-    "description": "dnsaj  dsa dsa sda dsjabdsa dsad sadk wadscusb adbsua hdoif ba fboa",
     "image": "images/projects/profesorLayton.png"
   }
 ]

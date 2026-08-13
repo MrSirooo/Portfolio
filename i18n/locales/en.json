@@ -1,0 +1,39 @@
+{
+  "home": {
+    "statusBadge": "VERSION 2.05 // ENGINE_READY",
+    "developerLabel": "DEVELOPER // IAGO OTERO",
+    "title": {
+      "part1": "Building Worlds,",
+      "part2": "Frame by Frame"
+    },
+    "description": "Game Designer and Programmer with experience developing in Unity and Unreal Engine. Throughout my career, I have collaborated in multidisciplinary teams, working closely with professionals from different areas of game development. This experience has allowed me to develop effective communication between departments, facilitate team coordination, and contribute efficiently to project development.",
+    "buttons": {
+      "projects": "VIEW PROJECTS",
+      "arsenal": "[View Arsenal]"
+    }
+  },
+
+  "projects": {
+    "title": "Featured Projects",
+    "description": "A selection of my best implementations and designs",
+    "filters": {
+      "all": "All",
+      "unity": "Unity",
+      "unreal": "Unreal Engine"
+    },
+    "items": {
+      "catchTheFly": {
+        "name": "Catch The Fly",
+        "description": "Catch The Fly description"
+      },
+      "horrorPrototype": {
+        "name": "Horror Prototype",
+        "description": "Horror Prototype description"
+      },
+      "puzzleGame": {
+        "name": "Puzzle Game",
+        "description": "Puzzle Game description"
+      }
+    }
+  }
+}

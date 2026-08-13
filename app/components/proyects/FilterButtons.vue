@@ -1,6 +1,11 @@
 <script setup lang="ts">
+  interface Filter {
+    value: string
+    label: string
+  }
+
   defineProps<{
-    filters: readonly string[]
+    filters: readonly Filter[]
     currentFilter: string
   }>()
 
@@ -11,13 +16,13 @@
 
 <template>
   <ul class="flex flex-wrap items-center gap-2 sm:gap-3">
-    <li v-for="filter in filters" :key="filter">
+    <li v-for="filter in filters" :key="filter.value">
       <AppButton
-        :variant="currentFilter === filter ? 'primary' : 'secondary'"
+        :variant="currentFilter === filter.value ? 'primary' : 'secondary'"
         size="sm"
-        @click="emit('change', filter)"
+        @click="emit('change', filter.value)"
       >
-        {{ filter }}
+        {{ $t(filter.label) }}
       </AppButton>
     </li>
   </ul>
