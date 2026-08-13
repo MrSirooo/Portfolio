@@ -1,9 +1,9 @@
 <script setup lang="ts">
   import projects from '~/data/proyectsData.json'
 
-  const filters = ['All', 'Unity', 'Unreal Engine']
+  const FILTERS = ['All', 'Unity', 'Unreal Engine']
 
-  const currentFilter = ref<(typeof filters)[number]>('All')
+  const currentFilter = ref<(typeof FILTERS)[number]>('All')
 
   const filteredProjects = computed(() => {
     if (currentFilter.value === 'All') {
@@ -14,7 +14,7 @@
   })
 
   const changeCurrentFilter = (eventName: string) => {
-    if (!filters.includes(eventName)) return
+    if (!FILTERS.includes(eventName)) return
 
     currentFilter.value = eventName
   }
@@ -36,7 +36,7 @@
       </div>
 
       <ProyectsFilterButtons
-        :filters="filters"
+        :filters="FILTERS"
         :current-filter="currentFilter"
         @change="changeCurrentFilter"
       />
