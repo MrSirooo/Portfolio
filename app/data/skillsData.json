@@ -1,32 +1,27 @@
 [
   {
-    "name": "Unity",
+    "id": "unity",
     "icon": "mdi:unity",
-    "level": 95,
-    "description": "HDRP, URP, ECS (DOTS) y físicas avanzadas."
+    "level": 95
   },
   {
-    "name": "UnrealEngine",
+    "id": "unrealEngine",
     "icon": "cib:unreal-engine",
-    "level": 60,
-    "description": "Arquitectura de sistemas y comportamientos de IA."
+    "level": 60
   },
   {
-    "name": "C#",
+    "id": "csharp",
     "icon": "mdi:language-csharp",
-    "level": 90,
-    "description": "Arquitectura de sistemas y comportamientos de IA."
+    "level": 90
   },
   {
-    "name": "Visual Studio",
+    "id": "visualStudio",
     "icon": "mdi:microsoft-visual-studio",
-    "level": 80,
-    "description": "Arquitectura de sistemas y comportamientos de IA."
+    "level": 80
   },
   {
-    "name": "Visual Studio Code",
+    "id": "visualStudioCode",
     "icon": "mdi:microsoft-visual-studio-code",
-    "level": 80,
-    "description": "Arquitectura de sistemas y comportamientos de IA."
+    "level": 80
   }
 ]

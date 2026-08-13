@@ -35,5 +35,33 @@
         "description": "Puzzle Game description"
       }
     }
+  },
+
+  "technicalArsenal": {
+    "title": "Technical Arsenal",
+    "subtitle": "//SKILL MATRIX",
+    "level": "LEVEL",
+    "skills": {
+      "unity": {
+        "name": "Unity",
+        "description": "HDRP, URP, ECS (DOTS) and advanced physics."
+      },
+      "unrealEngine": {
+        "name": "Unreal Engine",
+        "description": "System architecture and AI behavior."
+      },
+      "csharp": {
+        "name": "C#",
+        "description": "System architecture and AI behavior."
+      },
+      "visualStudio": {
+        "name": "Visual Studio",
+        "description": "System architecture and AI behavior."
+      },
+      "visualStudioCode": {
+        "name": "Visual Studio Code",
+        "description": "System architecture and AI behavior."
+      }
+    }
   }
 }

@@ -35,5 +35,33 @@
         "description": "Descripción de Puzzle Game"
       }
     }
+  },
+
+  "technicalArsenal": {
+    "title": "Arsenal Técnico",
+    "subtitle": "//MATRIZ DE HABILIDADES",
+    "level": "NIVEL",
+    "skills": {
+      "unity": {
+        "name": "Unity",
+        "description": "HDRP, URP, ECS (DOTS) y físicas avanzadas."
+      },
+      "unrealEngine": {
+        "name": "Unreal Engine",
+        "description": "Arquitectura de sistemas y comportamientos de IA."
+      },
+      "csharp": {
+        "name": "C#",
+        "description": "Arquitectura de sistemas y comportamientos de IA."
+      },
+      "visualStudio": {
+        "name": "Visual Studio",
+        "description": "Arquitectura de sistemas y comportamientos de IA."
+      },
+      "visualStudioCode": {
+        "name": "Visual Studio Code",
+        "description": "Arquitectura de sistemas y comportamientos de IA."
+      }
+    }
   }
 }
