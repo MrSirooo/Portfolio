@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  const localePath = useLocalePath()
+
   interface Props {
     variant?: 'primary' | 'secondary' | 'link'
     size?: 'sm' | 'md' | 'lg'
@@ -43,7 +45,7 @@
   <button>
     <NuxtLink
       v-if="props.to"
-      :to="props.to"
+      :to="localePath(props.to)"
       :class="[
         'inline-flex items-center justify-center font-medium transition-colors duration-300',
         variantsClass,

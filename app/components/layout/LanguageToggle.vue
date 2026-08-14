@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const { locale, setLocale } = useI18n()
+  const { locale, setLocale, t } = useI18n()
 
   const isEnglish = computed(() => locale.value === 'en')
 
@@ -15,7 +15,11 @@
     type="button"
     role="switch"
     :aria-checked="isEnglish"
-    :aria-label="isEnglish ? 'Cambiar a español' : 'Switch to English'"
+    :aria-label="
+      isEnglish
+        ? t('navigation.language.switchToSpanish')
+        : t('navigation.language.switchToEnglish')
+    "
     class="relative flex h-8 w-16 items-center rounded-full border border-[var(--color-border)] bg-secundary p-1 transition-colors"
     @click="toggleLanguage"
   >
@@ -27,9 +31,8 @@
     </span>
 
     <span class="flex w-full justify-between px-1 text-[10px] font-bold">
-      <span :class="{ 'opacity-0': isEnglish }"> ES </span>
-
-      <span :class="{ 'opacity-0': !isEnglish }"> EN </span>
+      <span> ES </span>
+      <span> EN </span>
     </span>
   </button>
 </template>

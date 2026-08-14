@@ -1,4 +1,16 @@
 {
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "technicalArsenal": "Technical Arsenal",
+    "contact": "Contact",
+    "hireMe": "Hire Me",
+    "language": {
+      "switchToSpanish": "Switch to Spanish",
+      "switchToEnglish": "Switch to English"
+    }
+  },
+  
   "home": {
     "statusBadge": "VERSION 2.05 // ENGINE_READY",
     "developerLabel": "DEVELOPER // IAGO OTERO",

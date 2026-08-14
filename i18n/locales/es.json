@@ -1,4 +1,16 @@
 {
+  "navigation": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "technicalArsenal": "Arsenal Técnico",
+    "contact": "Contacto",
+    "hireMe": "Contrátame",
+    "language": {
+      "switchToSpanish": "Cambiar a español",
+      "switchToEnglish": "Cambiar a inglés"
+    }
+  },
+
   "home": {
     "statusBadge": "VERSION 2.05 // MOTOR_LISTO",
     "developerLabel": "DESARROLLADOR // IAGO OTERO",
@@ -77,7 +89,7 @@
       "label": "PROTOCOLO_EMAIL",
       "name": "Correo"
     },
-    
+
     "phone": {
       "label": "PROTOCOLO_PHONE",
       "name": "Teléfono"

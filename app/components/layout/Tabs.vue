@@ -1,21 +1,22 @@
 <script setup>
   const localePath = useLocalePath()
+  const { t } = useI18n()
 
   const tabs = [
     {
-      label: 'Home',
+      key: 'home',
       path: '/',
     },
     {
-      label: 'Projects',
+      key: 'projects',
       path: '/projects',
     },
     {
-      label: 'Technical Arsenal',
+      key: 'technicalArsenal',
       path: '/technicalArsenal',
     },
     {
-      label: 'Contact',
+      key: 'contact',
       path: '/contact',
     },
   ]
@@ -26,13 +27,13 @@
     <ul
       class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 md:gap-8 text-xs sm:text-sm font-medium"
     >
-      <li v-for="tab in tabs" :key="tab.label">
+      <li v-for="tab in tabs" :key="tab.key">
         <NuxtLink
           :to="localePath(tab.path)"
           active-class="text-primary after:w-full"
           class="relative pb-1 transition-colors hover:text-primary after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-0.5 after:w-0 after:bg-[var(--color-primary)] after:transition-all after:duration-300 hover:after:w-full"
         >
-          {{ tab.label }}
+          {{ t(`navigation.${tab.key}`) }}
         </NuxtLink>
       </li>
     </ul>
