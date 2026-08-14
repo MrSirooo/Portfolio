@@ -63,5 +63,54 @@
         "description": "Arquitectura de sistemas y comportamientos de IA."
       }
     }
+  },
+
+  "contact": {
+    "title": {
+      "part1": "Construyamos algo",
+      "part2": "Incremental"
+    },
+
+    "description": "Disponible para desarrollo freelance, consultoría o roles permanentes en estudios innovadores. Hablemos sobre tu visión.",
+
+    "email": {
+      "label": "PROTOCOLO_EMAIL",
+      "name": "Correo"
+    },
+    
+    "phone": {
+      "label": "PROTOCOLO_PHONE",
+      "name": "Teléfono"
+    },
+
+    "form": {
+      "name": {
+        "label": "IDENTIFICACIÓN // NOMBRE",
+        "placeholder": "Nombre Apellido"
+      },
+      "email": {
+        "label": "UPLINK // EMAIL",
+        "placeholder": "correo electrónico"
+      },
+      "message": {
+        "label": "DETALLES MISIÓN // MENSAJE",
+        "placeholder": "Tengo un proyecto que cambiará el mundo..."
+      },
+      "submit": "ESTABLECER CONEXIÓN"
+    },
+
+    "validation": {
+      "nameRequired": "El nombre es obligatorio",
+      "emailRequired": "El correo es obligatorio",
+      "emailInvalid": "Introduce una dirección de correo válida",
+      "messageRequired": "El mensaje es obligatorio"
+    },
+    
+    "notifications": {
+      "copied": "{parameter} copiado correctamente.",
+      "copyError": "No se ha podido copiar la información.",
+      "validationError": "Transmisión fallida. Revisa los datos marcados.",
+      "success": "Conexión establecida. Mensaje enviado con éxito."
+    }
   }
 }

@@ -63,5 +63,48 @@
         "description": "System architecture and AI behavior."
       }
     }
+  },
+
+  "contact": {
+    "title": {
+      "part1": "Let's build something",
+      "part2": "Incremental"
+    },
+    "description": "Available for freelance development, consulting, or permanent roles in innovative studios. Let's talk about your vision.",
+    "email": {
+      "label": "PROTOCOL_EMAIL",
+      "name": "Email"
+    },
+    "phone": {
+      "label": "PROTOCOL_PHONE",
+      "name": "Phone"
+    },
+    "form": {
+      "name": {
+        "label": "IDENTIFICATION // NAME",
+        "placeholder": "First Last"
+      },
+      "email": {
+        "label": "UPLINK // EMAIL",
+        "placeholder": "email address"
+      },
+      "message": {
+        "label": "MISSION DETAILS // MESSAGE",
+        "placeholder": "I have a project that will change the world..."
+      },
+      "submit": "ESTABLISH CONNECTION"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Message is required"
+    },
+    "notifications": {
+      "copied": "{parameter} copied successfully.",
+      "copyError": "The information could not be copied.",
+      "validationError": "Transmission failed. Check the marked fields.",
+      "success": "Connection established. Message sent successfully."
+    }
   }
 }

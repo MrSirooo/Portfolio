@@ -1,4 +1,5 @@
 export const useValidation = () => {
+  const { t } = useI18n()
   const { showNotification } = useNotification()
 
   interface ContactForm {
@@ -7,7 +8,7 @@ export const useValidation = () => {
     message: string
   }
 
-  interface errorForm {
+  interface ErrorForm {
     nameError: string
     emailError: string
     messageError: string
@@ -19,7 +20,7 @@ export const useValidation = () => {
     message: '',
   })
 
-  const errors = ref<errorForm>({
+  const errors = ref<ErrorForm>({
     nameError: '',
     emailError: '',
     messageError: '',
@@ -27,7 +28,7 @@ export const useValidation = () => {
 
   const validateName = (): boolean => {
     if (!form.value.name.trim()) {
-      errors.value.nameError = 'Name is required'
+      errors.value.nameError = t('contact.validation.nameRequired')
       return false
     }
 
@@ -42,12 +43,12 @@ export const useValidation = () => {
 
   const validateEmail = (): boolean => {
     if (!form.value.email.trim()) {
-      errors.value.emailError = 'Email is required'
+      errors.value.emailError = t('contact.validation.emailRequired')
       return false
     }
 
     if (!isValidEmail(form.value.email)) {
-      errors.value.emailError = 'Please enter a valid email address'
+      errors.value.emailError = t('contact.validation.emailInvalid')
       return false
     }
 
@@ -56,7 +57,7 @@ export const useValidation = () => {
 
   const validateMessage = (): boolean => {
     if (!form.value.message.trim()) {
-      errors.value.messageError = 'Message is required'
+      errors.value.messageError = t('contact.validation.messageRequired')
       return false
     }
 
@@ -77,11 +78,11 @@ export const useValidation = () => {
 
   const handleSubmit = (): void => {
     if (!validateForm()) {
-      showNotification('Transmisión fallida. Revisa los datos marcados.', 'error')
+      showNotification(t('contact.notifications.validationError'), 'error')
       return
     }
 
-    showNotification('Conexión establecida. Mensaje enviado con éxito.', 'success')
+    showNotification(t('contact.notifications.success'), 'success')
   }
 
   return { form, errors, handleSubmit }

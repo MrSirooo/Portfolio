@@ -1,13 +1,15 @@
 <script setup lang="ts">
   import contactInfo from '~/data/contactData.json'
+
+  const { t } = useI18n()
   const { showNotification } = useNotification()
 
   const copyToClipboard = async (text: string, parameter: string): Promise<void> => {
     try {
       await navigator.clipboard.writeText(text)
-      showNotification(`${parameter} copiado correctamente.`, 'success', 'bottom-left')
-    } catch (error) {
-      showNotification(`Error: ${error}.`, 'error', 'bottom-left')
+      showNotification(t('contact.notifications.copied', { parameter }), 'success', 'bottom-left')
+    } catch {
+      showNotification(t('contact.notifications.copyError'), 'error', 'bottom-left')
     }
   }
 </script>
@@ -19,21 +21,22 @@
   >
     <div class="flex flex-col justify-center gap-6 w-full">
       <h1 class="text-2xl sm:text-4xl font-bold">
-        Construyamos algo <span class="text-primary">Incremental</span>.
+        {{ t('contact.title.part1') }}
+        <span class="text-primary">{{ t('contact.title.part2') }}</span
+        >.
       </h1>
 
       <h3 class="text-sm sm:text-base text-muted">
-        Disponible para desarrollo freelance, consultoría o roles permanentes en estudios
-        innovadores. Hablemos sobre tu visión.
+        {{ t('contact.description') }}
       </h3>
 
       <div class="flex items-center gap-4">
         <Icon :name="contactInfo.emailIcon" size="40" class="shrink-0" />
         <div class="flex flex-col min-w-0">
-          <h4 class="text-xs sm:text-sm text-muted">PROTOCOLO_EMAIL</h4>
+          <h4 class="text-xs sm:text-sm text-muted">{{ t('contact.email.label') }}</h4>
           <button
             class="text-left text-sm sm:text-base break-all cursor-pointer transition-colors hover:text-primary"
-            @click="copyToClipboard(contactInfo.email, 'Correo')"
+            @click="copyToClipboard(contactInfo.email, t('contact.email.name'))"
           >
             {{ contactInfo.email }}
           </button>
@@ -43,10 +46,10 @@
       <div class="flex items-center gap-4">
         <Icon :name="contactInfo.phoneIcon" size="40" class="shrink-0" />
         <div class="flex flex-col min-w-0">
-          <h4 class="text-xs sm:text-sm text-muted">PROTOCOLO_PHONE</h4>
+          <h4 class="text-xs sm:text-sm text-muted">{{ t('contact.phone.label') }}</h4>
           <button
             class="text-left text-sm sm:text-base cursor-pointer transition-colors hover:text-primary"
-            @click="copyToClipboard(contactInfo.phone, 'Telefono')"
+            @click="copyToClipboard(contactInfo.phone, t('contact.phone.name'))"
           >
             {{ contactInfo.phone }}
           </button>
